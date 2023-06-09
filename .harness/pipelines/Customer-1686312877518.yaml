@@ -31,3 +31,22 @@ pipeline:
             spec: {}
             type: Cloud
         type: CI
+  notificationRules:
+    - name: EmailNotification
+      identifier: EmailNotification
+      pipelineEvents:
+        - type: PipelineStart
+        - type: StageFailed
+          forStages:
+            - AllStages
+      notificationMethod:
+        type: Email
+        spec:
+          userGroups: []
+          recipients:
+            - versha.kamthan@gmail.com
+      enabled: true
+  flowControl:
+    barriers:
+      - name: Barrier1
+        identifier: Barrier1
