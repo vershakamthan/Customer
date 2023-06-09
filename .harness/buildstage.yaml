@@ -1,0 +1,15 @@
+inputSet:
+  pipeline:
+    identifier: Build_Customer_1686312900207
+    properties:
+      ci:
+        codebase:
+          build:
+            spec:
+              branch: master
+            type: branch
+    object Object: properties.ci.codebase
+  name: buildstage
+  identifier: buildstage
+  orgIdentifier: default
+  projectIdentifier: default_project
